@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОЛДСКУЛ ЗОМБИ</title>
+    <style>
+        /* Общие стили для тела документа */
+        body {
+            /* Фиксированные размеры, как запрошено */
+            width: 1280px;
+            height: 720px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Скрываем прокрутку, если содержимое выходит за рамки */
+
+            /* Фон в зомби-тематике */
+            background-color: #0d0d0d;
+            background-image: url('uploaded:nokasked1.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: #d1d1d1;
+            
+            /* Выравнивание содержимого по центру */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Контейнер для основного содержимого */
+        .motd-container {
+            background-color: rgba(26, 26, 26, 0.8);
+            border: 2px solid #333;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.5) inset;
+            border-radius: 8px;
+            padding: 40px 60px;
+            max-width: 90%;
+        }
+
+        /* Заголовок "ОЛДСКУЛ ЗОМБИ" */
+        .motd-title {
+            font-size: 5rem;
+            color: #ff4500;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #800000;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        /* Стиль для подзаголовка */
+        .motd-subtitle {
+            font-size: 2rem;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00cc00;
+            margin-bottom: 25px;
+        }
+        
+        /* Стили для правил и информации */
+        .motd-info {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+
+        .motd-info li::before {
+            content: '💀 ';
+            color: #ff4500;
+        }
+
+        .motd-info li.green::before {
+            content: '🟢 ';
+            color: #00ff00;
+        }
+
+        .motd-footer {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #888;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        /* Анимация пульсации для заголовка */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="motd-container">
+        <h1 class="motd-title">ОЛДСКУЛ ЗОМБИ</h1>
+        <h2 class="motd-subtitle">Добро пожаловать на сервер!</h2>
+        <ul class="motd-info">
+            <li>⚔️ Выживание - наша цель.</li>
+            <li>💀 Заражение необратимо.</li>
+            <li>🤝 Помогайте своим.</li>
+            <li>📣 Связь с админом: `/report <причина>`</li>
+        </ul>
+        <div class="motd-footer">
+            <p>💀 Отличной игры! 💀</p>
+        </div>
+    </div>
+</body>
+</html>
